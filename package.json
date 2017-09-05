@@ -1,0 +1,21 @@
+{
+    "name": "docs",
+    "version": "0.0.0",
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ut-cea/docs.git"
+    },
+    "scripts": {
+        "postinstall": "gitbook install ./"
+    },
+    "author": "Computational Engineering Assoication",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ut-cea/docs/issues"
+    },
+    "homepage": "https://github.com/ut-cea/docs#readme",
+    "dependencies": {
+        "gitbook-cli": "^2.3.2"
+    }
+}
