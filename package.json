@@ -7,7 +7,9 @@
         "url": "git+https://github.com/ut-cea/docs.git"
     },
     "scripts": {
-        "postinstall": "gitbook install ./"
+        "postinstall": "gitbook install ./",
+        "build": "gitbook build",
+        "serve": "gitbook serve"
     },
     "author": "Computational Engineering Assoication",
     "license": "MIT",

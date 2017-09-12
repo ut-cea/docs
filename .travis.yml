@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+    - '6'
+sudo: false
+install:
+    - npm install
+script:
+    - npm run build
+after_success:
+    - cp -R _book/* .
+    - rm -r node_modules _book
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+        branch: master
+notifications:
+    email: false
