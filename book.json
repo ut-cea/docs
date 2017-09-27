@@ -1,4 +1,15 @@
 {
     "root": "./src",
-    "plugins": ["mathjax"]
+    "plugins": [
+        "-sharing",
+        "hints",
+        "mathjax",
+        "youtube",
+        "github"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/ut-cea/docs"
+        }
+    }
 }

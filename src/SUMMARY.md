@@ -1,4 +1,11 @@
 # Summary
 
-* [Introduction](README.md)
+- [CEA Documentation](README.md)
 
+### Getting Started
+
+### Workshops
+
+### Language Guides
+
+### Misc
