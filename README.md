@@ -24,7 +24,8 @@ $ cd ut-cea-docs
 $ npm install
 ```
 
-This will get the repo and then install any needed npm dependencies.
+This will get the repo and then install any needed npm and gitbook-cli
+dependencies.
 
 ### Building the GitBook
 
@@ -41,4 +42,5 @@ the main page for the docs.
 $ npm run serve
 ```
 
-To host a server as well,
+This builds the source and hosts a server as well (on something like
+http://localhost:4000/).
