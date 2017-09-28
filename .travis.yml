@@ -8,7 +8,8 @@ script:
     - npm run build
 after_success:
     - cp -R _book/* .
-    - rm -r node_modules _book
+    - rm -r node_modules _book src
+    - rm **/*.md
 deploy:
     provider: pages
     skip_cleanup: true
