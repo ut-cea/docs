@@ -13,7 +13,7 @@ send group and private messages, upload files, etc.
 
 ## Getting into the Slack
 
-Go to http://ut-cea.slack.com and enter your utexas email to create an
+Go to http://ut-austin-cea.slack.com and enter your utexas email to create an
 account! With this link you can view the web version of Slack, however there
 are also desktop and mobile clients.
 
