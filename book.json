@@ -2,12 +2,17 @@
     "root": "./src",
     "plugins": [
         "-sharing",
+        "theme-api",
         "hints",
         "mathjax",
         "youtube",
-        "github"
+        "github",
+        "advanced-emoji"
     ],
     "pluginsConfig": {
+        "theme-api": {
+            "theme": "dark"
+        },
         "github": {
             "url": "https://github.com/ut-cea/docs"
         }
