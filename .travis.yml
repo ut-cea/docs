@@ -6,10 +6,12 @@ install:
     - npm install
 script:
     - npm run build
-after_success:
-    - cp -R _book/* .
-    - rm -r node_modules _book src
-    - rm **/*.md
+before_deploy:
+    - shopt -s extglob
+    - GLOBIGNORE='.git'
+    - rm -rf !(.nojekyll|LICENSE|README.md|_book)
+    - cp -r _book/* .
+    - rm -rf _book
 deploy:
     provider: pages
     skip_cleanup: true
@@ -18,3 +20,5 @@ deploy:
         branch: master
 notifications:
     email: false
+    slack:
+        secure: gFzwIUV6Wx6n6tGhp6RxjJDt2sTaHs2wGuby2xyGsqUbz+oYIqsl6X+zJoGhyQGwINFHv0KRmukTglLJcF8OhAseCAYN0Eagp1AXo30AttFhx2CT6NW8mxFnzgiY74q8zjGRO7lw69U44dsAMBh7WKMlTSJWftSzCx0pvKD7QveRZyDcuSUfDqZAnuhVvfvU9u7ZCFOfot+iwsTxb2yOlmjCfZm7ynDdop1cPvrScZkFrRHBqQ9miuE5v8Ivu0uOLPYQ0PIFEUggQkaZqvZ5VAdpyLKSrJu+nJZ9AG2S8pltqD/auhbKc197Gpwxl1zFqJQL5fv9VGQrhGdzTOxKECH1YEbTkuhb/tx5fZcwPlN2EmIHZz+Rl0gedTMowljLpjzxQgH3MFKQODdC6PGs8SEeUCjqUET2ZBCK2RRNLBxmhhxctTUQQYjRNgowX6zn1lTkjp/9avnsof1ULH/th3L7csRPyRXI8I0t93wdfllXYKnF+4JTHVGS/V7UHY5V4XaCp6j9ybrYLUMvUe48E6Tf9reKhmF7fVLNuO9o/S1ScbtoyvZAkLSyScEHra5McAyqdFkduUKpDTk0K3OuDrjbwAvazLaS01gWEQMTDqVllxRxpj78iupz8aoIguLSsYIHjAkCHKoJ8wYyybZ4Qt+wpZrVFwTE4QyD+IKUJPM=

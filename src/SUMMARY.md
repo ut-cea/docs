@@ -11,3 +11,5 @@
 ### Language Guides
 
 ### Misc
+
+- [Awesome Stuff](misc/awesome-stuff.md) 
