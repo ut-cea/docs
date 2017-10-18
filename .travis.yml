@@ -6,10 +6,12 @@ install:
     - npm install
 script:
     - npm run build
-after_success:
-    - cp -R _book/* .
-    - rm -r node_modules _book src
-    - rm **/*.md
+before_deploy:
+    - shopt -s extglob
+    - GLOBIGNORE='.git'
+    - rm -rf !(.nojekyll|LICENSE|README.md|_book)
+    - cp -r _book/* .
+    - rm -rf _book
 deploy:
     provider: pages
     skip_cleanup: true
